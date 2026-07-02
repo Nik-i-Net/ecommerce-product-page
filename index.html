@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="images/logo.svg" alt="Sneakers" />
+        <nav>
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <img src="images/icon-cart.svg" alt="cart" />
+        <img src="images/image-avatar.png" alt="avatar" />
+        <hr />
+      </header>
+
+      <main>
+        <article class="product">
+          <div class="product-gallery">
+            <img class="view-1" src="images/image-product-1.jpg" alt="TODO" />
+            <img class="view-2" src="images/image-product-2.jpg" alt="TODO" />
+            <img class="view-3" src="images/image-product-3.jpg" alt="TODO" />
+            <img class="view-4" src="images/image-product-4.jpg" alt="TODO" />
+
+            <div class="product-thumbnails">
+              <img class="thumbnail-1" src="images/image-product-1-thumbnail.jpg" alt="TODO" />
+              <img class="thumbnail-2" src="images/image-product-2-thumbnail.jpg" alt="TODO" />
+              <img class="thumbnail-3" src="images/image-product-3-thumbnail.jpg" alt="TODO" />
+              <img class="thumbnail-4" src="images/image-product-4-thumbnail.jpg" alt="TODO" />
+            </div>
+          </div>
+
+          <div class="product-details">
+            <p class="product-company">Sneaker Company</p>
+            <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+            <p class="product-description">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a durable
+              rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+
+            <div class="product-price">
+              <div class="product-price-current">
+                <span class="product-price-value">$125.00</span>
+                <span class="product-price-badge">50%</span>
+              </div>
+              <p class="product-price-original"><s>$250.00</s></p>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <div class="product-counter">
+              <button class="product-counter-btn" aria-label="Decrease quantity">
+                <img src="images/icon-minus.svg" alt="" />
+              </button>
+              <span class="product-counter-value">0</span>
+              <button class="product-counter-btn" aria-label="Increase quantity">
+                <img src="images/icon-plus.svg" alt="" />
+              </button>
+            </div>
+            <button type="product-add-btn">
+              <img src="images/icon-cart.svg" alt="" />
+              Add to cart
+            </button>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
+
