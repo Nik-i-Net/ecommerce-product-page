@@ -35,11 +35,26 @@
           <div class="cart-popup">
             <h3 class="cart-heading">Cart</h3>
             <hr />
-            <div id="cart-empty">
+            <div id="cart-empty" class="hidden">
               <p>Your cart is empty.</p>
             </div>
-            <div id="cart-filled" hidden>
-              <p>Your cart is filled.</p>
+            <div id="cart-filled">
+              <div class="cart-items">
+                <div class="cart-item">
+                  <img src="images/image-product-1-thumbnail.jpg" alt="TODO" />
+                  <div class="cart-item-info">
+                    <p class="cart-item-name">Fall Limited Edition Sneakers</p>
+                    <div class="cart-item-price">
+                      <span class="cart-item-unit-price">$125.00</span>
+                      x
+                      <span class="cart-item-quantity">3</span>
+                      <span class="cart-item-subtotal">$375.00</span>
+                    </div>
+                  </div>
+                  <button><img src="images/icon-delete.svg" alt="Remove item" /></button>
+                </div>
+              </div>
+              <button id="cart-checkout-btn" class="btn">Checkout</button>
             </div>
           </div>
         </div>
@@ -107,7 +122,7 @@
                   <img src="images/icon-plus.svg" alt="" />
                 </button>
               </div>
-              <button id="product-add-btn">
+              <button id="add-to-cart-btn" class="btn">
                 <img src="images/icon-cart-black.svg" alt="" />
                 Add to cart
               </button>
