@@ -28,9 +28,21 @@
             <li id="nav-contact"><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <button class="header-cart-btn">
-          <img src="images/icon-cart.svg" alt="cart" />
-        </button>
+        <div class="header-cart-wrapper">
+          <button class="header-cart-btn">
+            <img src="images/icon-cart.svg" alt="cart" />
+          </button>
+          <div class="cart-popup">
+            <h3 class="cart-heading">Cart</h3>
+            <hr />
+            <div id="cart-empty">
+              <p>Your cart is empty.</p>
+            </div>
+            <div id="cart-filled" hidden>
+              <p>Your cart is filled.</p>
+            </div>
+          </div>
+        </div>
         <button class="header-avatar-btn">
           <img src="images/image-avatar.png" alt="avatar" />
         </button>
