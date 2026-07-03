@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
@@ -32,7 +33,7 @@
           <button class="header-cart-btn">
             <img src="images/icon-cart.svg" alt="cart" />
           </button>
-          <div class="cart-popup">
+          <div class="cart-popup hidden">
             <h3 class="cart-heading">Cart</h3>
             <hr />
             <div id="cart-empty" class="hidden">
@@ -130,6 +131,70 @@
           </div>
         </article>
       </main>
+    </div>
+
+    <div class="lightbox-overlay hidden">
+      <div class="lightbox-container">
+        <button class="lightbox-close" aria-label="Close">
+          <svg
+            viewbox="0 0 14 15"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+
+        <div class="lightbox-image-wrapper">
+          <button class="lightbox-prev">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 1 3 9l8 8"
+                stroke="currentColor"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <img class="lightbox-image active" src="images/image-product-1.jpg" alt="TODO" />
+          <img class="lightbox-image" src="images/image-product-2.jpg" alt="TODO" />
+          <img class="lightbox-image" src="images/image-product-3.jpg" alt="TODO" />
+          <img class="lightbox-image" src="images/image-product-4.jpg" alt="TODO" />
+
+          <button class="lightbox-next">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m2 1 8 8-8 8"
+                stroke="currentColor"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="lightbox-thumbnails-container">
+          <button class="lightbox-thumbnail-btn selected">
+            <img id="lightbox-thumbnail-1" src="images/image-product-1-thumbnail.jpg" alt="TODO" />
+          </button>
+          <button class="lightbox-thumbnail-btn">
+            <img id="lightbox-thumbnail-2" src="images/image-product-2-thumbnail.jpg" alt="TODO" />
+          </button>
+          <button class="lightbox-thumbnail-btn">
+            <img id="lightbox-thumbnail-3" src="images/image-product-3-thumbnail.jpg" alt="TODO" />
+          </button>
+          <button class="lightbox-thumbnail-btn">
+            <img id="lightbox-thumbnail-4" src="images/image-product-4-thumbnail.jpg" alt="TODO" />
+          </button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
