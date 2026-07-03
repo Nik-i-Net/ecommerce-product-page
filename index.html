@@ -18,9 +18,9 @@
   <body>
     <div class="container">
       <header>
-        <img src="images/logo.svg" alt="Sneakers" />
+        <img class="logo" src="images/logo.svg" alt="Sneakers" />
         <nav>
-          <ul>
+          <ul class="nav-list">
             <li><a href="#">Collections</a></li>
             <li><a href="#">Men</a></li>
             <li><a href="#">Women</a></li>
@@ -28,24 +28,43 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <img src="images/icon-cart.svg" alt="cart" />
-        <img src="images/image-avatar.png" alt="avatar" />
-        <hr />
+        <button class="header-cart">
+          <img src="images/icon-cart.svg" alt="cart" />
+        </button>
+        <img class="header-avatar" src="images/image-avatar.png" alt="avatar" />
       </header>
+
+      <hr />
 
       <main>
         <article class="product">
           <div class="product-gallery">
-            <img class="view-1" src="images/image-product-1.jpg" alt="TODO" />
-            <img class="view-2" src="images/image-product-2.jpg" alt="TODO" />
-            <img class="view-3" src="images/image-product-3.jpg" alt="TODO" />
-            <img class="view-4" src="images/image-product-4.jpg" alt="TODO" />
+            <button id="view-1" class="product-gallery-btn active">
+              <img class="product-image" src="images/image-product-1.jpg" alt="TODO" />
+            </button>
+            <button id="view-2" class="product-gallery-btn">
+              <img class="product-image" src="images/image-product-2.jpg" alt="TODO" />
+            </button>
+            <button id="view-3" class="product-gallery-btn">
+              <img class="product-image" src="images/image-product-3.jpg" alt="TODO" />
+            </button>
+            <button id="view-4" class="product-gallery-btn">
+              <img class="product-image" src="images/image-product-4.jpg" alt="TODO" />
+            </button>
 
             <div class="product-thumbnails">
-              <img class="thumbnail-1" src="images/image-product-1-thumbnail.jpg" alt="TODO" />
-              <img class="thumbnail-2" src="images/image-product-2-thumbnail.jpg" alt="TODO" />
-              <img class="thumbnail-3" src="images/image-product-3-thumbnail.jpg" alt="TODO" />
-              <img class="thumbnail-4" src="images/image-product-4-thumbnail.jpg" alt="TODO" />
+              <button class="product-thumbnail-btn selected">
+                <img id="thumbnail-1" src="images/image-product-1-thumbnail.jpg" alt="TODO" />
+              </button>
+              <button class="product-thumbnail-btn">
+                <img id="thumbnail-2" src="images/image-product-2-thumbnail.jpg" alt="TODO" />
+              </button>
+              <button class="product-thumbnail-btn">
+                <img id="thumbnail-3" src="images/image-product-3-thumbnail.jpg" alt="TODO" />
+              </button>
+              <button class="product-thumbnail-btn">
+                <img id="thumbnail-4" src="images/image-product-4-thumbnail.jpg" alt="TODO" />
+              </button>
             </div>
           </div>
 
@@ -64,26 +83,24 @@
               </div>
               <p class="product-price-original"><s>$250.00</s></p>
             </div>
-          </div>
-
-          <div class="product-actions">
-            <div class="product-counter">
-              <button class="product-counter-btn" aria-label="Decrease quantity">
-                <img src="images/icon-minus.svg" alt="" />
-              </button>
-              <span class="product-counter-value">0</span>
-              <button class="product-counter-btn" aria-label="Increase quantity">
-                <img src="images/icon-plus.svg" alt="" />
+            <div class="product-actions">
+              <div class="product-counter">
+                <button id="product-counter-decrease" aria-label="Decrease quantity">
+                  <img src="images/icon-minus.svg" alt="" />
+                </button>
+                <span id="product-counter-value">0</span>
+                <button id="product-counter-increase" aria-label="Increase quantity">
+                  <img src="images/icon-plus.svg" alt="" />
+                </button>
+              </div>
+              <button id="product-add-btn">
+                <img src="images/icon-cart-black.svg" alt="" />
+                Add to cart
               </button>
             </div>
-            <button type="product-add-btn">
-              <img src="images/icon-cart.svg" alt="" />
-              Add to cart
-            </button>
           </div>
         </article>
       </main>
     </div>
   </body>
 </html>
-
