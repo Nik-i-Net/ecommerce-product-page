@@ -19,9 +19,10 @@
   <body>
     <div class="container">
       <header class="header">
+        <button id="menu-btn" aria-label="Menu"><img src="images/icon-menu.svg" /></button>
         <img class="logo" src="images/logo.svg" alt="Sneakers" />
-        <nav>
-          <ul class="nav-list">
+        <nav class="nav-list">
+          <ul>
             <li class="nav-item"><a href="#">Collections</a></li>
             <li class="nav-item"><a href="#">Men</a></li>
             <li class="nav-item active"><a href="#">Women</a></li>
@@ -31,7 +32,7 @@
         </nav>
         <div class="header-cart-wrapper">
           <button class="header-cart-btn">
-            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <svg viewbox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
                 fill="currentColor"
@@ -60,11 +61,35 @@
       <main>
         <article class="product">
           <div class="product-gallery">
+            <button class="product-prev" aria-label="Previous image">
+              <svg viewbox="0 0 12 18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+
             <button class="product-gallery-btn">
               <img class="product-image active" src="images/image-product-1.jpg" alt="TODO" />
               <img class="product-image" src="images/image-product-2.jpg" alt="TODO" />
               <img class="product-image" src="images/image-product-3.jpg" alt="TODO" />
               <img class="product-image" src="images/image-product-4.jpg" alt="TODO" />
+            </button>
+
+            <button class="product-next" aria-label="Next image">
+              <svg viewbox="0 0 13 18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </button>
 
             <div class="product-thumbnails">
@@ -217,6 +242,23 @@
             <img src="images/image-product-4-thumbnail.jpg" alt="TODO" />
           </button>
         </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu-overlay">
+      <div id="mobile-menu-container">
+        <button id="mobile-menu-close-btn" aria-label="Close menu">
+          <img src="images/icon-close.svg" alt="" />
+        </button>
+        <nav class="mobile-nav-list">
+          <ul>
+            <li class="mobile-nav-item"><a href="#">Collections</a></li>
+            <li class="mobile-nav-item"><a href="#">Men</a></li>
+            <li class="mobile-nav-item"><a href="#">Women</a></li>
+            <li class="mobile-nav-item"><a href="#">About</a></li>
+            <li class="mobile-nav-item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </body>

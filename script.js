@@ -8,11 +8,13 @@ const $ = {
   cartItemTemplate: document.getElementById("cart-item-template"),
 
   productGalleryBtn: document.querySelector(".product-gallery-btn"),
+  productPrevBtn: document.querySelector(".product-prev"),
+  productNextBtn: document.querySelector(".product-next"),
   productImages: document.querySelectorAll(".product-image"),
   productThumbnailBtns: document.querySelectorAll(".product-thumbnail-btn"),
   productQuantity: document.getElementById("product-quantity"),
-  productQuantityDescreaseBtn: document.getElementById("product-quantity-decrease-btn"),
-  productQuantityInscreaseBtn: document.getElementById("product-quantity-increase-btn"),
+  productQuantityDecreaseBtn: document.getElementById("product-quantity-decrease-btn"),
+  productQuantityIncreaseBtn: document.getElementById("product-quantity-increase-btn"),
   addToCartBtn: document.getElementById("add-to-cart-btn"),
 
   lightboxOverlay: document.querySelector(".lightbox-overlay"),
@@ -22,6 +24,11 @@ const $ = {
   lightboxPrevBtn: document.querySelector(".lightbox-prev"),
   lightboxNextBtn: document.querySelector(".lightbox-next"),
   lightboxThumbnailBtns: document.querySelectorAll(".lightbox-thumbnail-btn"),
+
+  menuBtn: document.getElementById("menu-btn"),
+  mobileMenuOverlay: document.getElementById("mobile-menu-overlay"),
+  mobileMenuContainer: document.getElementById("mobile-menu-container"),
+  mobileMenuCloseBtn: document.getElementById("mobile-menu-close-btn"),
 };
 
 const PRODUCT = { id: "product-123", name: "Fall Limited Edition Sneakers", price: 125 };
@@ -95,6 +102,16 @@ $.productGalleryBtn.addEventListener("click", () => {
   $.lightboxOverlay.classList.remove("hidden");
 });
 
+$.productPrevBtn.addEventListener("click", () => {
+  const newIndex = (state.activeImageIndex - 1 + TOTAL_IMAGES) % TOTAL_IMAGES;
+  setActiveImageIndex(newIndex);
+});
+
+$.productNextBtn.addEventListener("click", () => {
+  const newIndex = (state.activeImageIndex + 1) % TOTAL_IMAGES;
+  setActiveImageIndex(newIndex);
+});
+
 $.productThumbnailBtns.forEach((btn, i) => {
   btn.addEventListener("click", () => setActiveImageIndex(i));
 });
@@ -123,13 +140,13 @@ $.lightboxThumbnailBtns.forEach((btn, i) => {
   btn.addEventListener("click", () => setActiveImageIndex(i));
 });
 
-$.productQuantityDescreaseBtn.addEventListener("click", () => {
+$.productQuantityDecreaseBtn.addEventListener("click", () => {
   const curQuantity = state.productQuantity;
   if (curQuantity === 0) return;
   setProductQuantity(curQuantity - 1);
 });
 
-$.productQuantityInscreaseBtn.addEventListener("click", () => {
+$.productQuantityIncreaseBtn.addEventListener("click", () => {
   const curQuantity = state.productQuantity;
   if (curQuantity === 9) return;
   setProductQuantity(curQuantity + 1);
@@ -167,6 +184,20 @@ $.cartItems.addEventListener("click", (e) => {
 
   const cartItems = state.cartItems.filter((i) => i.id !== removeBtn.dataset.itemId);
   setCartItems(cartItems);
+});
+
+$.menuBtn.addEventListener("click", (e) => {
+  $.mobileMenuOverlay.classList.add("open");
+});
+
+$.mobileMenuOverlay.addEventListener("click", () => {
+  $.mobileMenuOverlay.classList.remove("open");
+});
+
+$.mobileMenuContainer.addEventListener("click", (e) => e.stopPropagation());
+
+$.mobileMenuCloseBtn.addEventListener("click", () => {
+  $.mobileMenuOverlay.classList.remove("open");
 });
 
 document.addEventListener("click", () => {
