@@ -32,6 +32,9 @@ const state = {
   cartItems: [],
 };
 
+const storedCart = localStorage.getItem("cart");
+if (storedCart) setCartItems(JSON.parse(storedCart));
+
 function setActiveImageIndex(newIndex) {
   const curIndex = state.activeImageIndex;
   if (curIndex === newIndex) return;
@@ -58,6 +61,7 @@ function setProductQuantity(quantity) {
 function setCartItems(items) {
   state.cartItems = items;
   renderCart();
+  localStorage.setItem("cart", JSON.stringify(items));
 }
 
 function renderCart() {
